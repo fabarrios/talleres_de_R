@@ -4,13 +4,27 @@ author: "Michael C. Jeziorski"
 date: "13 March 2019"
 output:
   html_document: 
-    highlight: textmate
     toc: yes
     toc_depth: 2
     toc_float: 
       collapsed: no
-    theme: cosmo
+    theme: cerulean
+    df_print: kable
 ---
+<style type="text/css">
+
+code.r{ /* Code block */
+    font-size: 12px;
+    font-family-monospace: Monaco;
+}
+
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, results = "markup")
+library(tidyverse)
+```
+
 
 # Introduction  <img style="float: right;" src="images/Rlogo.jpg">
 
@@ -51,7 +65,7 @@ R is intended to be friendly with other programs, and there are packages that wi
 The distribution of R you install on your computer is known as "base R", and it includes a set of commands to organize and visualize data.  These commands are useful but limited, and packages have been developed to expand on them.  Such packages can be installed and loaded within R to give the user a greater range of options.  Packages are particularly important in bioinformatics, and in many of the analyses in this course, we will start by loading packages that will facilitate how we work with R.
 
 To install a package, use the command  
-`install.packages(<package name>)`  
+`install.packages("<package name>")`  
 This needs to be done only once.
 
 To load a package into the current working environment, use  
@@ -82,7 +96,6 @@ The tutorial you are reading was created in R using R Markdown.
 * I add informative comments to my code as much as possible to help me later, knowing how frustrating it is to not remember what I was doing a year ago.  
 * I want my code to be easily read, so I use spaces and indentation in consistent ways.  
 * I prefer open-source software to licensed and often expensive software.  
-* To train in R I have relied heavily on the [DataCamp](https://www.datacamp.com/home) tutorial platform, which I **do** pay for.  Some of the exercises in this course have been adapted from DataCamp. 
 
 ***
 
